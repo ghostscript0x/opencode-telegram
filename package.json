@@ -1,0 +1,49 @@
+{
+  "name": "@ghostscript/opencode-telegram",
+  "version": "1.0.0",
+  "description": "Mirror OpenCode sessions to Telegram and control them remotely",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "opencode-telegram": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/menu.js",
+    "menu": "node dist/menu.js",
+    "install:plugin": "node dist/cli.js install",
+    "uninstall:plugin": "node dist/cli.js uninstall",
+    "status": "node dist/cli.js status",
+    "export": "node dist/cli.js export"
+  },
+  "keywords": ["opencode", "plugin", "telegram", "ghostscript"],
+  "author": "ghostscript0x <https://github.com/ghostscript0x>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghostscript0x/opencode-telegram"
+  },
+  "bugs": {
+    "url": "https://github.com/ghostscript0x/opencode-telegram/issues"
+  },
+  "homepage": "https://github.com/ghostscript0x/opencode-telegram#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@opencode-ai/plugin": "^1.17.18",
+    "@opencode-ai/sdk": "^1.17.18"
+  },
+  "devDependencies": {
+    "typescript": "5.8.2",
+    "@types/node": "24.12.2"
+  }
+}
